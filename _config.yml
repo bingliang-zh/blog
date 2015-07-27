@@ -1,9 +1,9 @@
 # Site wide configuration
 
-title:            blStudio
+title:            bl's blog
 locale:           zh_CN
-url:              http://thatblstudio.github.io/blog
-# url:              http://localhost:4000
+# url:              http://thatblstudio.github.io/blog
+url:              http://localhost:4000
 
 # Jekyll configuration
 
@@ -26,21 +26,21 @@ kramdown:
 
 # Site owner
 owner:
-  name: Your Name
+  name: Bingliang
   avatar: bio-photo.jpg
-  bio: "Describe your self."
-  email:
+  bio: "An indie developer lives in Hangzhou."
+  email: bl_indie@qq.com
   disqus-shortname:
   twitter: #username
   facebook: #username
   google:
-    plus: #username
+    plus: 116052774697386661438
     analytics:
     verify:
     ad-client:
     ad-slot:
   bing-verify:
-  github: #username
+  github: thatblstudio
   stackoverflow: #123456/username   from a "http://stackoverflow.com/users/123456/username" link
   linkedin: #username
   xing: #username
@@ -53,7 +53,7 @@ owner:
   dribbble: #username
   youtube: #username
   soundcloud: #username
-  weibo: #username
+  weibo: 2313701814
   flickr: #username
   codepen: #username
 
