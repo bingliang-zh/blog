@@ -139,7 +139,7 @@ USB设备，勾选**“启用USB控制器”**，点选**“USB 3.0 (xHCI)控制
 	<figcaption>只有一个32G的分区在资源管理器中显示</figcaption>
 </figure>
 
-再次打开虚拟机，记得再次载入.iso。这次选择Try Ubuntu without installing。把U盘载入Ubuntu系统，可以在Devices中看到四个设备，进入33G的那个设备，把EFI文件夹（就是刚才复制到U盘中的文件夹）复制到150M的那个设备中，将两个EFI文件夹合并，然后同样将EFI/ubuntu/grubx64.efi复制到EFI/BOOT目录下替换原有的同名文件即可。
+再次打开虚拟机，记得再次载入.iso。这次选择Try Ubuntu without installing。把U盘载入Ubuntu系统，可以在Devices中看到四个设备，进入33G的那个设备，把EFI文件夹（就是刚才复制到U盘中的文件夹）**剪切**到150M的那个设备中，将两个EFI文件夹合并，然后同样将EFI/ubuntu/grubx64.efi复制到EFI/BOOT目录下替换原有的同名文件即可。
 
 <figure>
 	<a href="{{ site.url }}/images/2015-07-28-how-to-build-an-usb-Ubuntu-on-surface-pro-3/6_copyEFI.png"><img src="{{ site.url }}/images/2015-07-28-how-to-build-an-usb-Ubuntu-on-surface-pro-3/6_copyEFI.png"></a>
@@ -150,9 +150,48 @@ USB设备，勾选**“启用USB控制器”**，点选**“USB 3.0 (xHCI)控制
 至此，一个可以从U盘启动的Ubuntu系统就制作完毕了。
 
 ## 进入Ubuntu
-Surface Pro 3可以参考[**微软官网手册**](https://www.microsoft.com/surface/zh-cn/support/storage-files-and-folders/boot-surface-pro-from-usb-recovery-device#)
+Surface Pro 3可以参考:
+> [**微软官网手册**](https://www.microsoft.com/surface/zh-cn/support/storage-files-and-folders/boot-surface-pro-from-usb-recovery-device#)
 
 完全关闭电脑后，插上制作好的USB Ubuntu系统盘，按住音量减小键，按下并释放电源键，当显示Surface徽标时，释放音量键小键，就启动了U盘上的系统。
 
+也可以按住把上面的流程中的音量减小键全部替换成音量增大键，进入类似bios的界面，Configure Alternate System Boot Order选项从**SSD Only**改为**USB -> SSD**然后保存并退出。然后就可以重启进入Ubuntu系统了。
+
+正常情况下是左图，如果出现黑屏只有grub的画面则检查32G那个分区里的EFI文件夹是否还存在，如果存在的话则删掉它。
+
+但是光这样的话还有很多使用上的问题，比如最重要的，type cover无法正常使用。如果要正常使用这些功能的话，则需要更新一下Ubuntu的内核。
+
 # 更新Ubuntu内核（安装驱动）
-这步的话还需要一个USB hub，
+
+感谢[**rubiojr**](https://github.com/rubiojr)的[**surface3-kernel**](https://github.com/rubiojr/surface3-kernel)项目。
+
+更新内核需要键盘，但是type cover和蓝牙都不能用，所以需要一个USB hub，而USB键盘和鼠标应该都有吧。
+
+> [内核下载地址](http://surface3.rbel.co/kernel/)
+
+把这个页面的所有带有3.16.0的.deb包下载到本地。这些.deb包都是已经编译好了的，直接使用即可，如果Ubuntu版本不是14.0.2 LTS的话可能需要按照[**surface3-kernel**](https://github.com/rubiojr/surface3-kernel)的编译步骤来编译出需要的deb包。
+
+把下载下来的4个.deb文件放到一个新建的kernel文件夹中，用各种方式（boot分区中转，空余容量中转，或者拿另一个U盘来中转）拷到用户主文件夹下。
+
+除了内核还可以增加对触摸板的支持，并进行蓝牙/Wifi固件的安装。这两个都很简单，按照[**surface3-kernel**](https://github.com/rubiojr/surface3-kernel)下面的Touchpad support和Bluetooth/Wifi说明操作即可。不过无线还有不稳定的情况。
+
+然后Ctrl+Shift+T打开终端，逐条输入命令
+
+    安装内核：    
+    sudo dpkg -i kernel/*.deb    
+    sudo update-grub
+    
+    增加触摸板支持：    
+    sudo cp -i xorg.conf /etc/X11/xorg.conf 
+    
+	蓝牙/Wifi固件安装：
+    sudo cp mrvl/* /lib/firmware/mrvl/ 
+    
+	重启：
+	sudo reboot
+
+在启动项里面选择**Ubuntu 高级选项**->**Ubuntu, Linux 3.16.0-rc6-surface3**即可使用type cover了。（不过有个bug，type cover在开机状况下拿下来再装上去就无法使用了。）wifi连不上时先关机再开机一般可以解决，直接重启有时会有问题。
+
+> 如何调整该内核为默认选项还在研究中。
+
+不管怎么说，最后我们就可以愉快地在Surface Pro 3上面使用Ubuntu了！
