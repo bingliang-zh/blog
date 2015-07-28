@@ -86,9 +86,21 @@ USB设备，勾选**“启用USB控制器”**，点选**“USB 3.0 (xHCI)控制
 
 在安装类型这个界面可以选择默认选项或者选择其他选项。默认选项则会由Ubuntu自动给你分区，其他选项可以自己进行分区。64G全装Ubuntu不免显得有些浪费，所以这里我准备分出32G来当做普通的U盘使用。所以这里我选择其他选项，你也可以省事选择默认选项。
 
+<figure>
+	<a href="{{ site.url }}/images/2015-07-28-how-to-build-an-usb-Ubuntu-on-surface-pro-3/1_install.png"><img src="{{ site.url }}/images/2015-07-28-how-to-build-an-usb-Ubuntu-on-surface-pro-3/1_install.png"></a>
+</figure>
+
 在分区之前最好使用RMPrepUSB进行一下格式化，因为使用过的U盘容易出现各种问题，用Ubuntu分区就容易在分区之前或者之后多出那0MB或者1MB，虽然没有太大问题，但是分区表非常难看。
 
+<figure>
+	<a href="{{ site.url }}/images/2015-07-28-how-to-build-an-usb-Ubuntu-on-surface-pro-3/5_RMPrepUSB.png"><img src="{{ site.url }}/images/2015-07-28-how-to-build-an-usb-Ubuntu-on-surface-pro-3/5_RMPrepUSB.png"></a>
+	<figcaption>勾上设置分区不可启动，选择FAT32文件系统</figcaption>
+</figure>
+
 下面是我的分区表的图：
+<figure>
+	<a href="{{ site.url }}/images/2015-07-28-how-to-build-an-usb-Ubuntu-on-surface-pro-3/2_partition.png"><img src="{{ site.url }}/images/2015-07-28-how-to-build-an-usb-Ubuntu-on-surface-pro-3/2_partition.png"></a>
+</figure>
 
 现在设备的最开始的地方建立一个32GB大小的fat32分区，然后挂载到/windows目录下。
 
@@ -114,14 +126,33 @@ USB设备，勾选**“启用USB控制器”**，点选**“USB 3.0 (xHCI)控制
 
 用7zip或别的解压缩软件打开ubuntu-14.04.2-desktop-amd64.iso，或者直接挂载到虚拟光驱，把里面的EFI文件夹复制出来。
 
+<figure>
+	<a href="{{ site.url }}/images/2015-07-28-how-to-build-an-usb-Ubuntu-on-surface-pro-3/4_EFI.png"><img src="{{ site.url }}/images/2015-07-28-how-to-build-an-usb-Ubuntu-on-surface-pro-3/4_EFI.png"></a>
+</figure>
+
 > 如果之前分区的时候你是用默认配置，那么你会发现电脑挂载了一个几百M的磁盘，直接打开它，然后把从iso里面的EFI文件夹复制到该磁盘中，与原有的EFI文件夹合并，并且将EFI/ubuntu/grubx64.efi复制到EFI/BOOT目录下替换原有的同名文件即可。做完这些步骤后最好把整个EFI文件夹复制并重命名为EFI.backup，以便以后可能启动表损坏了之后进行复原。
 
-因为用了自定义的分区，所以只能挂载32G的大分区，而150M的启动分区则不能在
+因为用了自定义的分区，所以只能挂载32G的大分区，而150M的启动分区则不能在Windows的资源管理器中显示出来，但是可以在Ubuntu中全部显示。所以我们接下去再使用虚拟机来进行复制工作。先把.iso文件中的EFI文件夹复制到32G的分区里面
+
+<figure>
+	<a href="{{ site.url }}/images/2015-07-28-how-to-build-an-usb-Ubuntu-on-surface-pro-3/3_sandisk.png"><img src="{{ site.url }}/images/2015-07-28-how-to-build-an-usb-Ubuntu-on-surface-pro-3/3_sandisk.png"></a>
+	<figcaption>只有一个32G的分区在资源管理器中显示</figcaption>
+</figure>
+
+再次打开虚拟机，记得再次载入.iso。这次选择Try Ubuntu without installing。把U盘载入Ubuntu系统，可以在Devices中看到四个设备，进入33G的那个设备，把EFI文件夹（就是刚才复制到U盘中的文件夹）复制到150M的那个设备中，将两个EFI文件夹合并，然后同样将EFI/ubuntu/grubx64.efi复制到EFI/BOOT目录下替换原有的同名文件即可。
+
+<figure>
+	<a href="{{ site.url }}/images/2015-07-28-how-to-build-an-usb-Ubuntu-on-surface-pro-3/6_copyEFI.png"><img src="{{ site.url }}/images/2015-07-28-how-to-build-an-usb-Ubuntu-on-surface-pro-3/6_copyEFI.png"></a>
+</figure>
+
+关闭虚拟机。
 
 至此，一个可以从U盘启动的Ubuntu系统就制作完毕了。
 
 ## 进入Ubuntu
-待续
+Surface Pro 3可以参考[**微软官网手册**](https://www.microsoft.com/surface/zh-cn/support/storage-files-and-folders/boot-surface-pro-from-usb-recovery-device#)
+
+完全关闭电脑后，插上制作好的USB Ubuntu系统盘，按住音量减小键，按下并释放电源键，当显示Surface徽标时，释放音量键小键，就启动了U盘上的系统。
 
 # 更新Ubuntu内核（安装驱动）
 这步的话还需要一个USB hub，
