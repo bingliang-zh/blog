@@ -194,4 +194,8 @@ Surface Pro 3可以参考:
 
 > 如何调整该内核为默认选项还在研究中。
 
+<figure>
+	<a href="{{ site.url }}/images/2015-07-28-how-to-build-an-usb-Ubuntu-on-surface-pro-3/7_final.png"><img src="{{ site.url }}/images/2015-07-28-how-to-build-an-usb-Ubuntu-on-surface-pro-3/7_final.png"></a>
+</figure>
+
 不管怎么说，最后我们就可以愉快地在Surface Pro 3上面使用Ubuntu了！
