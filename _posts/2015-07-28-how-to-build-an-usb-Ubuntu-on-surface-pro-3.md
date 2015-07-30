@@ -194,7 +194,7 @@ Surface Pro 3可以参考:
 
 在启动项里面选择**Ubuntu 高级选项**->**Ubuntu, Linux 3.16.0-rc6-surface3**即可使用type cover了。（不过有个bug，type cover在开机状况下拿下来再装上去就无法使用了。）wifi连不上时先关机再开机一般可以解决，直接重启有时会有问题。
 
-## 如何设置新内核为默认选项
+## 设置新内核为默认选项
 
 打开终端，输入命令
 
@@ -223,7 +223,7 @@ ctrl+s，关闭gedit
 
 PS：
 
-在查找修改grub的资料的时候顺便修改了一下Ubuntu的界面，自我感觉变得好看了许多，诸如终端透明啊，菜单栏透明什么的。触屏用Ubuntu爽的飞起，而且任务栏就该放在左边，左手一伸大拇指随便点。
+在查找修改grub的资料的时候顺便修改了一下Ubuntu的界面，自我感觉变得好看了许多，诸如终端透明啊，菜单栏透明什么的。触屏用Ubuntu爽的飞起，而且任务栏就放在左边，左手一伸大拇指随便点。
 
 <figure>
 	<a href="{{ site.url }}/images/2015-07-28-how-to-build-an-usb-Ubuntu-on-surface-pro-3/8_beautify.png"><img src="{{ site.url }}/images/2015-07-28-how-to-build-an-usb-Ubuntu-on-surface-pro-3/8_beautify.png"></a>
