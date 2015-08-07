@@ -1,8 +1,8 @@
 ---
 layout: post
-title: 在U盘上安装Ubuntu（Surface Pro3）
+title: 在U盘上安装Ubuntu(Surface Pro3)
 excerpt: "使用此方法不会影响Surface Pro3的Windows环境，不占用任何SSD空间，不修改SSD启动项。"
-modified: 2015-07-30
+modified: 2015/8/7 16:27:08 
 tags: [ubuntu, surface pro 3, virtualbox, USB-stick]
 comments: true
 image:
