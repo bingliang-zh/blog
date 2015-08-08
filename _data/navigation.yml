@@ -1,12 +1,12 @@
 # Site navigation links
 
-- title: About
+- title: 关于
   url: /about/
 
-- title: Posts
+- title: 博客
   url: /posts/
 
-- title: Project "reimu"
+- title: 毕业设计·灵梦
   url: https://github.com/thatblstudio/reimu
 
 # - title: Theme Setup

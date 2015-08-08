@@ -1,5 +1,5 @@
 ---
 layout: post-index
-title: All Posts
+title: 全部文章
 excerpt: "A List of Posts"
 ---
