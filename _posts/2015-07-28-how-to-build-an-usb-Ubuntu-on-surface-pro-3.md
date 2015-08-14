@@ -202,7 +202,7 @@ Surface Pro 3可以参考:
     
 修改`GRUB_DEFAULT="0"`为`GRUB_DEFAULT="1>2"`，这表示第二个选项的子目录的第三个选项即"Ubuntu, Linux 3.16.0-rc6-surface3"（从0开始计数）。
 
-    这里有可能选项位置会有变化，比如我这里几天后更新系统之后就更换了位置，从第三个变成了第五个，响应更改GRUB_DEFAULT的值为1>4即可，这里的要选名字为Linux 3.16.0-rc6-surface3的那个。改完之后不要忘记更新grub。
+> 这里有可能选项位置会有变化，比如我这里几天后更新系统之后就更换了位置，从第三个变成了第五个，响应更改GRUB_DEFAULT的值为1>4即可，这里的要选名字为Linux 3.16.0-rc6-surface3的那个。改完之后不要忘记更新grub。
 
 在`GRUB_HIDDEN_TIMEOUT=0`前加上"#"注释掉该行
 
