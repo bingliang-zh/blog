@@ -2,7 +2,7 @@
 layout: post
 title: 在U盘上安装Ubuntu(Surface Pro3)
 excerpt: "使用此方法不会影响Surface Pro3的Windows环境，不占用任何SSD空间，不修改SSD启动项。"
-modified: 2015/8/7 16:27:08 
+modified: 2015/8/14 12:43:30 
 tags: [ubuntu, surface pro 3, virtualbox, USB-stick]
 comments: true
 image:
@@ -200,7 +200,9 @@ Surface Pro 3可以参考:
 
     sudo gedit /etc/default/grub
     
-修改`GRUB_DEFAULT="0"`为`GRUB_DEFAULT="1>2"`，这表示第二个选项的子目录的第三个选项（从0开始计数）。
+修改`GRUB_DEFAULT="0"`为`GRUB_DEFAULT="1>2"`，这表示第二个选项的子目录的第三个选项即"Ubuntu, Linux 3.16.0-rc6-surface3"（从0开始计数）。
+
+    这里有可能选项位置会有变化，比如我这里几天后更新系统之后就更换了位置，从第三个变成了第五个，响应更改GRUB_DEFAULT的值为1>4即可，这里的要选名字为Linux 3.16.0-rc6-surface3的那个。改完之后不要忘记更新grub。
 
 在`GRUB_HIDDEN_TIMEOUT=0`前加上"#"注释掉该行
 
