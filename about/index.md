@@ -41,9 +41,9 @@ image:
 
 巨巨的博客：
 
-> [云风的 BLOG](http://blog.codingnow.com/)
+> [云风的BLOG](http://blog.codingnow.com/)
 > 
-> [Keep on Fighting!|谢益辉](http://yihui.name/cn/)
+> [Keep on Fighting! - 谢益辉](http://yihui.name/cn/)
 > 
 > [阮一峰的网络日志](http://www.ruanyifeng.com/blog/)
 
@@ -51,4 +51,4 @@ image:
 
 > [JUSTFONT BLOG](http://blog.justfont.com/)
 > 
-> [机核网 | GAMECORES | 主机游戏媒体](http://www.g-cores.com)
+> [机核网 - GAMECORES](http://www.g-cores.com)
