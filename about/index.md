@@ -46,6 +46,8 @@ image:
 > [Keep on Fighting! - 谢益辉](http://yihui.name/cn/)
 > 
 > [阮一峰的网络日志](http://www.ruanyifeng.com/blog/)
+> 
+> [Cyril Mottier](http://cyrilmottier.com/)
 
 也可以看看：
 
