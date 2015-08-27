@@ -1,0 +1,14 @@
+image:
+  feature: nasa/airbos.jpg
+  credit: NASA
+  creditlink: http://www.nasa.gov/image-feature/stark-beauty-of-supersonic-shock-waves
+
+image:
+  feature: nasa/m104.jpg
+  credit: Hubble Space Telescope
+  creditlink: http://hubblesite.org/newscenter/archive/releases/2003/28/image/a/
+
+image:
+  feature: nasa/star-birth.jpg
+  credit: Hubble Space Telescope
+  creditlink: http://hubblesite.org/newscenter/archive/releases/2007/16/image/a/

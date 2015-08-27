@@ -6,9 +6,9 @@ modified: 2015/8/14 12:43:30
 tags: [ubuntu, surface pro 3, virtualbox, USB-stick]
 comments: true
 image:
-  feature: sample-image-5.jpg
-  credit: WeGraphics
-  creditlink: http://wegraphics.net/downloads/free-ultimate-blurred-background-pack/
+  feature: pixabay/library.jpg
+  credit: Pixabay
+  creditlink: https://pixabay.com/zh/%E5%BA%93-%E4%B9%A6%E7%B1%8D-%E4%B9%A6%E6%9E%B6-%E6%95%99%E8%82%B2-%E6%96%87%E5%AD%A6-%E5%AD%A6%E6%A0%A1-%E7%9F%A5%E8%AF%86-%E5%A4%A7%E5%AD%A6-%E6%99%BA%E6%85%A7-%E6%9E%B6-438389/
 ---
 
 <section id="table-of-contents" class="toc">
