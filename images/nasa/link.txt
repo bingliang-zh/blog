@@ -4,6 +4,11 @@ image:
   creditlink: http://www.nasa.gov/image-feature/stark-beauty-of-supersonic-shock-waves
 
 image:
+  feature: nasa/rover-selfie.jpg
+  credit: NASA
+  creditlink: https://www.nasa.gov/mission_pages/mars/images/index.html?id=368765
+
+image:
   feature: nasa/m104.jpg
   credit: Hubble Space Telescope
   creditlink: http://hubblesite.org/newscenter/archive/releases/2003/28/image/a/

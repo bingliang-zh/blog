@@ -1,0 +1,4 @@
+image:
+  feature: pixiv/kyudo.jpg
+  credit: Pixiv - 幻象黑兔
+  creditlink: http://www.pixiv.net/member_illust.php?mode=medium&illust_id=45046654
