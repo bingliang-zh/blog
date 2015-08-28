@@ -2,7 +2,7 @@
 layout: post
 title: 聊聊live2d【编辑中...】
 excerpt: "简略地说一些关于live2d的并附上资源链接"
-modified: 2015/08/28 23:27:29 
+modified: 2015/08/29 0:54:20 
 tags: [live2d]
 comments: false
 image:
