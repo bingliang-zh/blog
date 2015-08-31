@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 聊聊live2d
-excerpt: "简略地说一些关于live2d的并附上资源链接"
+excerpt: "本来想写技术向的但是变成了瞎扯"
 modified: 2015/08/31 16:35:15 
 tags: [live2d]
 comments: true
