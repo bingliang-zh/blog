@@ -4,7 +4,7 @@ title: 聊聊live2d
 excerpt: "简略地说一些关于live2d的并附上资源链接"
 modified: 2015/08/31 16:35:15 
 tags: [live2d]
-comments: false
+comments: true
 image:
   feature: pixiv/kyudo.jpg
   credit: Pixiv - 幻象黑兔
