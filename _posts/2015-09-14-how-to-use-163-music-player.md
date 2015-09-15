@@ -65,7 +65,7 @@ image:
 
 直接使用iframe是会直接显示出代码，而不会显示播放器的，下面写出修改的地方：
 
-把iframe的width和height标签的值加上双引号就可以了，顺便把自动播放给关掉，就像这样：
+**把iframe的width和height标签的值加上双引号就可以了**，顺便把自动播放给关掉，就像这样：
 
     <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="http://music.163.com/outchain/player?type=2&id=29734857&auto=0&height=66"></iframe>
 
