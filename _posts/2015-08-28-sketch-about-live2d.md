@@ -2,7 +2,7 @@
 layout: post
 title: 聊聊live2d
 excerpt: "本来想写技术向的但是变成了瞎扯"
-modified: 2015/08/31 16:35:15 
+modified: 2015/09/20 1:17:43 
 tags: [live2d]
 comments: true
 image:
@@ -20,8 +20,6 @@ image:
 {:toc}
 </div>
 </section><!-- /#table-of-contents -->
-
-## 前言【然而和正文并没有什么关系】
 
 选了个弓道的P站的图来作为题图。高中的时候去过日本，寄宿家庭带我去了一个弓道馆，那种静与动、力量与柔美的矛盾与调和，太美。
 

@@ -6,8 +6,11 @@
 - title: 博客
   url: /posts/
 
-- title: 毕业设计·灵梦
-  url: https://github.com/thatblstudio/reimu
+- title: Profile
+  url: /profile/
+
+- title: 毕业设计·友伴
+  url: https://github.com/thatblstudio/belong
 
 # - title: Theme Setup
 #   url: /theme-setup/

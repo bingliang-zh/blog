@@ -11,6 +11,9 @@ image:
   creditlink: https://pixabay.com/zh/%E5%8E%9F%E9%87%8E-%E5%B0%8F%E9%BA%A6-%E5%A4%A9%E7%A9%BA-%E6%99%AF%E8%A7%82-%E5%86%9C%E4%B8%9A-%E8%87%AA%E7%84%B6-%E5%A4%8F%E5%A4%A9-%E5%86%9C%E6%9D%91-%E9%BB%84%E8%89%B2-%E5%86%9C%E5%9C%BA-867232/
 ---
 
+
+----------
+
 ## 关于博客：
 基于Jekyll&Github搭建。使用[Minimal Mistakes theme](http://mmistakes.github.io/minimal-mistakes/)作为博客模板。我朋友圈上说：它将会是（其实是我理想是）一个技术艺术得兼，多干货少戾气的优雅的博客~
 

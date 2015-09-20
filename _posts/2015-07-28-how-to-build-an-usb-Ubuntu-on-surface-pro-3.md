@@ -2,7 +2,7 @@
 layout: post
 title: 在U盘上安装Ubuntu(Surface Pro3)
 excerpt: "使用此方法不会影响Surface Pro3的Windows环境，不占用任何SSD空间，不修改SSD启动项。"
-modified: 2015/8/14 12:43:30 
+modified: 2015/09/20 1:15:53 
 tags: [ubuntu, surface pro 3, virtualbox, USB-stick]
 comments: true
 image:
@@ -20,8 +20,6 @@ image:
 {:toc}
 </div>
 </section><!-- /#table-of-contents -->
-
-## 简介
 
 我有一台Surface Pro 3 128gb版本，因为需要同时使用Windows环境和Ubuntu环境，所以我需要在默认基础上安装Ubuntu。但是因为SSD容量太小，而且并不想让修改Surface Pro3的启动项等等，所以最后决定制作一个独立的U盘Ubuntu系统。但是谷歌搜索U盘Ubuntu系统得到的大多是USB live这种的，而这种系统不会在U盘上保存任何信息，而我需要的是一个正常的Ubuntu系统，可以保存我安装的程序，文件等等。
 
