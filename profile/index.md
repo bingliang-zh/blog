@@ -34,7 +34,7 @@ After graduation: a programmer in a mobile game company. Job content: channel ac
 
 ### Honors
 
-- My graduation project [**Live2D-based IOT  Interactive Avatar Software**](https://github.com/thatblstudio/belong/blob/master/%E5%9F%BA%E4%BA%8ELive2d%E6%8A%80%E6%9C%AF%E7%9A%84%E8%99%9A%E6%8B%9F%E5%BD%A2%E8%B1%A1%E7%89%A9%E8%81%94%E7%BD%91%E4%BA%A4%E4%BA%92%E8%BD%AF%E4%BB%B6-%E5%91%A8%E7%A7%89%E4%BA%AE%20%E6%AF%95%E8%AE%BE%E6%8A%A5%E5%91%8A.pdf) was selected as one of the Most Excellent Models.
+- My graduation project [**Live2D-based IOT  Interactive Avatar Software**](https://github.com/thatblstudio/belong/blob/master/%E5%9F%BA%E4%BA%8ELive2d%E6%8A%80%E6%9C%AF%E7%9A%84%E8%99%9A%E6%8B%9F%E5%BD%A2%E8%B1%A1%E7%89%A9%E8%81%94%E7%BD%91%E4%BA%A4%E4%BA%92%E8%BD%AF%E4%BB%B6-%E5%91%A8%E7%A7%89%E4%BA%AE%20%E6%AF%95%E8%AE%BE%E6%8A%A5%E5%91%8A.pdf) was selected as one of "Zhejiang University’s Undergraduate Excellent Graduation Project, 2015." Certificate No. 201521087
 
 ### Projects
 
