@@ -2,7 +2,7 @@
 layout: post
 title: 在U盘上安装Ubuntu(Surface Pro3)
 excerpt: "使用此方法不会影响Surface Pro3的Windows环境，不占用任何SSD空间，不修改SSD启动项。"
-modified: 2015/09/20 1:15:53 
+modified: 2016/01/06 13:36:53
 tags: [ubuntu, surface pro 3, virtualbox, USB-stick]
 comments: true
 image:
@@ -21,6 +21,12 @@ image:
 </div>
 </section><!-- /#table-of-contents -->
 
+
+# 2016/01/06更新系统至Ubuntu 15.10
+
+**现已经更新到15.10，各种支持几乎完美，wifi非常稳定，typecover摘下再插上也没有任何问题，以作为SP3的主力系统在进行使用。下文中15.10对应的更新和不同会用粗体标出。**
+
+
 我有一台Surface Pro 3 128gb版本，因为需要同时使用Windows环境和Ubuntu环境，所以我需要在默认基础上安装Ubuntu。但是因为SSD容量太小，而且并不想让修改Surface Pro3的启动项等等，所以最后决定制作一个独立的U盘Ubuntu系统。但是谷歌搜索U盘Ubuntu系统得到的大多是USB live这种的，而这种系统不会在U盘上保存任何信息，而我需要的是一个正常的Ubuntu系统，可以保存我安装的程序，文件等等。
 
 在整个过程中经历了很多困难，包括用U盘重刷了整个Surface，安装Ubuntu驱动等等。所以在这篇博客的第一篇上我准备记录一下自己的步骤，给有同样需求的人以借鉴。
@@ -29,23 +35,25 @@ image:
 
 ## 准备
 
-一个8G以上的U盘。建议16G以上，USB3.0（如果要进行编译等工作肯定需要一个大的磁盘空间，而且要获得良好的系统体验的话磁盘速度也很重要），我先是使用SONY晶雅16G安装成功，这次教程使用Sandisk CZ80 64G进行示范。
+一个8G以上的U盘。建议16G以上，USB3.0（如果要进行编译等工作肯定需要一个大的磁盘空间，而且要获得良好的系统体验的话磁盘速度也很重要），我先是使用SONY晶雅16G安装成功，这次教程使用Sandisk CZ80 64G进行示范。**现在cz80因为太长，插在USB口移动不方便，已经给了做设计的女票，换成了Sandisk CZ43 64G。**
 
 > [**Ubuntu 14.04.2 LTS 64位安装包(.iso)**](http://www.ubuntu.com/download/desktop)
-> 
+>
+> [**Ubuntu 15.10 64位安装包(.iso)**](http://www.ubuntu.com/download/desktop)**（推荐使用）**
+>
 > 必须是64位不然不能用EFI启动。本文后半部分安装驱动的情况是以LTS版本为例，如果安装其他版本的Ubuntu可能需要自行编译Linux内核。
 
 > [**VirtualBox 5.0.0和扩展包**](https://www.virtualbox.org/wiki/Downloads)
-> 
+>
 > 分别下载VirtualBox 5.0 for Windows hosts和VirtualBox 5.0 Oracle VM VirtualBox Extension Pack。
-> 
+>
 > 增加扩展包后可以支持USB3.0，应该可以使安装过程更快（未测试）。
 
 下载下来的文件应该为：
 
 | 文件名（官方版本更新的话文件名可能有变化） |
 |:--------|
-| ubuntu-14.04.2-desktop-amd64.iso  |
+| ubuntu-XX.XX-desktop-amd64.iso  |
 | VirtualBox-5.0.0-101573-Win.exe  |
 | Oracle_VM_VirtualBox_Extension_Pack-5.0.0-101573.vbox-extpack |
 {: rules="groups"}
@@ -82,7 +90,7 @@ USB设备，勾选**“启用USB控制器”**，点选**“USB 3.0 (xHCI)控制
 
 语言我这里选择了中文，然后断开网络连接（这样安装速度会更快），点击继续。
 
-在安装类型这个界面可以选择默认选项或者选择其他选项。默认选项则会由Ubuntu自动给你分区，其他选项可以自己进行分区。64G全装Ubuntu不免显得有些浪费，所以这里我准备分出32G来当做普通的U盘使用。所以这里我选择其他选项，你也可以省事选择默认选项。
+在安装类型这个界面可以选择默认选项或者选择其他选项。默认选项则会由Ubuntu自动给你分区，其他选项可以自己进行分区。64G全装Ubuntu不免显得有些浪费，所以这里我准备分出32G来当做普通的U盘使用。**Ubuntu 15.10安装时无法使用本文分出32G来做U盘的方法，因为无法复制启动文件到对应的efi分区（windows和ubuntu都无法读取）中，所以安装的时候我使用了全部的磁盘空间，这样efi分区则可以被windows读取进行修改。这种情况下我使用主机的TF卡槽进行windows和ubuntu的数据中转。**所以这里我选择其他选项，你也可以省事选择默认选项。
 
 <figure>
 	<a href="{{ site.url }}/images/2015-07-28-how-to-build-an-usb-Ubuntu-on-surface-pro-3/1_install.png"><img src="{{ site.url }}/images/2015-07-28-how-to-build-an-usb-Ubuntu-on-surface-pro-3/1_install.png"></a>
@@ -102,8 +110,8 @@ USB设备，勾选**“启用USB控制器”**，点选**“USB 3.0 (xHCI)控制
 
 现在设备的最开始的地方建立一个32GB大小的fat32分区，然后挂载到/windows目录下。
 
-> 为什么要在设备的最开始的地方建立32G的fat32分区？
-> 
+> 为什么要在设备的最开始的地方建立32G的fat32分区？**此方法15.10无效，此后不再注明。**
+>
 > 因为windows系统识别U盘的时候只能识别第一个能识别的分区，如果把EFI启动分区作为第一个分区，那么windows就只能把第一个分区挂载到系统里，而我想要挂载32G的分区用来当U盘。虽然只能识别一个分区，不过这也有一个好处，在USB病毒泛滥的打印店等我们就不用担心病毒会对EFI启动分区做什么手脚了。
 
 然后在空余空间建立一个150MB的EFI启动分区，如果使用默认配置这个分区一般会有几百兆，但是我们仅仅装单系统，所以不用很大。
@@ -122,7 +130,7 @@ USB设备，勾选**“启用USB控制器”**，点选**“USB 3.0 (xHCI)控制
 
 ## 修改EFI Boot
 
-用7zip或别的解压缩软件打开ubuntu-14.04.2-desktop-amd64.iso，或者直接挂载到虚拟光驱，把里面的EFI文件夹复制出来。
+用7zip或别的解压缩软件打开ubuntu-XX.XX-desktop-amd64.iso，或者直接挂载到虚拟光驱，把里面的EFI文件夹复制出来。
 
 <figure>
 	<a href="{{ site.url }}/images/2015-07-28-how-to-build-an-usb-Ubuntu-on-surface-pro-3/4_EFI.png"><img src="{{ site.url }}/images/2015-07-28-how-to-build-an-usb-Ubuntu-on-surface-pro-3/4_EFI.png"></a>
@@ -162,45 +170,47 @@ Surface Pro 3可以参考:
 # 更新Ubuntu内核（安装驱动）
 
 感谢[**rubiojr**](https://github.com/rubiojr)的[**surface3-kernel**](https://github.com/rubiojr/surface3-kernel)项目。
-
+**15.10使用[neoreeps](https://github.com/neoreeps)的[surface-pro-3](https://github.com/neoreeps/surface-pro-3)项目。**
 更新内核需要键盘，但是type cover和蓝牙都不能用，所以需要一个USB hub，而USB键盘和鼠标应该都有吧。
 
-> [内核下载地址](http://surface3.rbel.co/kernel/)
+> [14.04内核下载地址](http://surface3.rbel.co/kernel/)
+>
+> [15.10内核下载地址](https://drive.google.com/folderview?id=0BzNI3Zdy9Y6kfklBazc5Y3VQXzd6MU1oaUFMS0NxWEI4dmpFRmFITWZFZWpfM0U1dUJJaTQ&usp=drive_web) **Google Drive需要翻墙**
 
-把这个页面的所有带有3.16.0的.deb包下载到本地。这些.deb包都是已经编译好了的，直接使用即可，如果Ubuntu版本不是14.0.2 LTS的话可能需要按照[**surface3-kernel**](https://github.com/rubiojr/surface3-kernel)的编译步骤来编译出需要的deb包。
+14.04把所有带有3.16.0的.deb包下载到本地。这些.deb包都是已经编译好了的，直接使用即可，如果Ubuntu版本不是14.0.2 LTS的话可能需要按照[**surface3-kernel**](https://github.com/rubiojr/surface3-kernel)的编译步骤来编译出需要的deb包。**15.10则可以直接下载15.10内核下载地址Latest (Torvalds Tree)文件夹中的所有.deb包**
 
 把下载下来的4个.deb文件放到一个新建的kernel文件夹中，用各种方式（boot分区中转，空余容量中转，或者拿另一个U盘来中转）拷到用户主文件夹下。
 
-除了内核还可以增加对触摸板的支持，并进行蓝牙/Wifi固件的安装。这两个都很简单，按照[**surface3-kernel**](https://github.com/rubiojr/surface3-kernel)下面的Touchpad support和Bluetooth/Wifi说明操作即可。不过无线还有不稳定的情况。
+除了内核还可以增加对触摸板的支持，并进行蓝牙/Wifi固件的安装。这两个都很简单，按照[**surface3-kernel**](https://github.com/rubiojr/surface3-kernel)下面的Touchpad support和Bluetooth/Wifi说明操作即可。不过无线还有不稳定的情况。**15.10则不需要安装触摸板支持和蓝牙wifi固件，内核装完重启就可以了。**
 
 然后Ctrl+Shift+T打开终端，逐条输入命令
 
     安装内核：    
     sudo dpkg -i kernel/*.deb    
     sudo update-grub
-    
+
     增加触摸板支持：    
-    sudo cp -i xorg.conf /etc/X11/xorg.conf 
-    
+    sudo cp -i xorg.conf /etc/X11/xorg.conf
+
 	蓝牙/Wifi固件安装：
-    sudo cp mrvl/* /lib/firmware/mrvl/ 
-    
+    sudo cp mrvl/* /lib/firmware/mrvl/
+
 	重启：
 	sudo reboot
 
 重启之后会发现多了紫色背景的启动项选择界面。
 
-在启动项里面选择**Ubuntu 高级选项**->**Ubuntu, Linux 3.16.0-rc6-surface3**即可使用type cover了。（不过有个bug，type cover在开机状况下拿下来再装上去就无法使用了。）wifi连不上时先关机再开机一般可以解决，直接重启有时会有问题。
+在启动项里面选择**Ubuntu 高级选项**->**Ubuntu, Linux 3.16.0-rc6-surface3**即可使用type cover了。（不过有个bug，type cover在开机状况下拿下来再装上去就无法使用了。）wifi连不上时先关机再开机一般可以解决，直接重启有时会有问题。**Ubuntu 15.10使用高级选项第一个即可。**
 
 ## 设置新内核为默认选项
 
 打开终端，输入命令
 
     sudo gedit /etc/default/grub
-    
-修改`GRUB_DEFAULT="0"`为`GRUB_DEFAULT="1>2"`，这表示第二个选项的子目录的第三个选项即"Ubuntu, Linux 3.16.0-rc6-surface3"（从0开始计数）。
 
-> 这里有可能选项位置会有变化，比如我这里几天后更新系统之后就更换了位置，从第三个变成了第五个，响应更改GRUB_DEFAULT的值为1>4即可，这里的要选名字为Linux 3.16.0-rc6-surface3的那个。改完之后不要忘记更新grub。
+修改`GRUB_DEFAULT="0"`为`GRUB_DEFAULT="1>2"`，这表示第二个选项的子目录的第三个选项即"Ubuntu, Linux 3.16.0-rc6-surface3"（从0开始计数），**15.10则是`GRUB_DEFAULT="1>0"`**。
+
+> 这里有可能选项位置会有变化，比如我这里几天后更新系统之后就更换了位置，从第三个变成了第五个，响应更改GRUB_DEFAULT的值为1>4即可，这里的要选名字为Linux 3.16.0-rc6-surface3的那个。改完之后不要忘记更新grub。评论有说可以使用apt-get autoremove，没经过测试，不过remove一下没有任何坏处。
 
 在`GRUB_HIDDEN_TIMEOUT=0`前加上"#"注释掉该行
 
@@ -212,7 +222,7 @@ ctrl+s，关闭gedit
 在终端里输入命令更新grub
 
 	sudo update-grub
-	
+
 关闭电脑，开机就可以看到效果了（蓝牙被我关掉了，所以图上没有，刚装完是会有的）。
 
 <figure>
