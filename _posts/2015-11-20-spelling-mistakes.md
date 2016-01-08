@@ -74,3 +74,13 @@ image:
     MzwSdkController.getInstance().destory();
 
 居然这渠道的文档里面的destroy是拼对的。也许他们的文档书写人员用了word的拼写检查功能吧（但代码里还是错啊。）
+
+----------
+
+## login --> loign
+
+**拇指玩SDK3.1.1登录**
+
+    new MzwLoignCallback(){}；
+
+天呐，写这个SDK的人打字真“快”。
