@@ -84,3 +84,19 @@ image:
     new MzwLoignCallback(){}；
 
 天呐，写这个SDK的人打字真“快”。
+
+----------
+
+## callback --> callcack
+
+**安智SDK3.5.2**
+
+上个版本里他写的是
+
+    public void ininSdkCallcack()
+
+新版本里改成了
+
+    public void initSdkCallcack()
+
+init是改正了，可是同一个名字里面callback没看出来么？
