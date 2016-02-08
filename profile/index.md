@@ -30,7 +30,7 @@ Bachelor of Engineering degree in Digital Media Technology from Zhejiang Univers
 
 ### Work Experience
 
-After graduation: a programmer in a mobile game company. Job content: channel access, game engine modify, game modules, etc. 
+After graduation: a programmer in a mobile game company. Job content: channel access, game engine modify, game modules, etc.
 
 ### Honors
 
@@ -62,6 +62,5 @@ IOT, Android, VR, Video games, etc.
 
 ### Contact
 
-- bl_indie@qq.com(preffered)
+- bl_indie@qq.com(prefer)
 - zbl1992@gmail.com
-
