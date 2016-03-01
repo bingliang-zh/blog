@@ -7,3 +7,8 @@ image:
   feature: pixiv/halloween.jpg
   credit: Pixiv - seeker
   creditlink: http://www.pixiv.net/member_illust.php?mode=medium&illust_id=46796482
+
+image:
+  feature: pixiv/Moriya-Suwako.png
+  credit: Pixiv - 湯木間
+  creditlink: http://www.pixiv.net/member_illust.php?mode=medium&illust_id=55527150
