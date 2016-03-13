@@ -4,6 +4,7 @@ title:            秉亮的博客
 locale:           zh_CN
 url:              https://thatblstudio.github.io/blog
 # url:              http://localhost:4000
+enforce_ssl:      thatblstudio.github.io
 
 # Jekyll configuration
 
