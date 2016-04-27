@@ -81,14 +81,19 @@ image:
 
 在本地使用QQ旋风获得了大概800K/s的不是很稳定的速度。
 
-如果你要下的文件名刚好是`SurfacePro3_BMR_40_7.102.0.zip`的话，我服务器中还暂时存放着该文件，但是因为我的droplet容量较小，所以如果我空间不够用的话我有可能把它删掉，毕竟一个7G大小的包呢！我也可能考虑使用种子的方式来进行分享。
+~~如果你要下的文件名刚好是`SurfacePro3_BMR_40_7.102.0.zip`的话，我服务器中还暂时存放着该文件，但是因为我的droplet容量较小，所以如果我空间不够用的话我有可能把它删掉，毕竟一个7G大小的包呢！我也可能考虑使用种子的方式来进行分享。~~
 
-下载地址：
+~~下载地址：~~
 
-[**http://blstudio.cloud/download/SurfacePro3_BMR_40_7.102.0.zip**](http://blstudio.cloud/download/SurfacePro3_BMR_40_7.102.0.zip)
+~~**http://blstudio.cloud/download/SurfacePro3_BMR_40_7.102.0.zip**~~
+（现已被移除）
 
 MD5: 1848d2ac06f38d0b33b96de6a5ce95d0
 SHA1:1a1204cdff2d917696d9c24f1112908b7d3b9f81
+
+经过比对MD5和SHA1，该文件和我从百度网盘上下的是一样的：[**http://tieba.baidu.com/p/4456759293**](http://tieba.baidu.com/p/4456759293)
+
+所以说，微软的这个官方映像在初始化设置的时候就漏了一步让用户选择电脑名字的步骤。不过这个可以在安装完成之后可以在【所有设置-->系统-->关于】里面修改
 
 如果你要下的文件名不是我这个的话，可以参照我的方式也创建一个DigitalOcean的droplet，然后下载自己的对应recovery image。
 
