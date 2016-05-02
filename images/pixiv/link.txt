@@ -12,3 +12,8 @@ image:
   feature: pixiv/Moriya-Suwako.png
   credit: Pixiv - 湯木間
   creditlink: http://www.pixiv.net/member_illust.php?mode=medium&illust_id=55527150
+
+image:
+  feature: pixiv/bloodborne.jpg
+  credit: Pixiv - しおん
+  creditlink: http://www.pixiv.net/member_illust.php?mode=medium&illust_id=54649364
