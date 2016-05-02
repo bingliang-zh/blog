@@ -23,6 +23,12 @@ image:
 
 ------
 
+## 题图
+
+来自P主：しおん。他（她）投稿只有7张，但是却展现出极其高超的绘画技巧和极其巧妙的电影化运镜还有极其老练的叙事手法。看油画应该要看巨幅的，这个画师的作品尺寸也都很大，这样才有“尺度之变”给人带来的震撼。他（她）的[**《侍》**](http://www.pixiv.net/member_illust.php?mode=medium&illust_id=56396627)、[**《掃除》**](http://www.pixiv.net/member_illust.php?mode=medium&illust_id=56376805)和[**《カインハーストの騎士》**](http://www.pixiv.net/member_illust.php?mode=medium&illust_id=54649364)都很有故事感。
+
+> [「しおん」的个人资料 [pixiv]](http://www.pixiv.net/member.php?id=14707888)
+
 ## 写作起因
 
 有个网友吧，在尝试装一个U盘系统，然后3天之后说，“我彻底放弃了”。我想了想也是很感慨，想想之前还认真给他了许多回复，怕是化为虚无。
