@@ -2,7 +2,7 @@
 layout: post
 title: 在markdown日志中使用网易云音乐外链播放器
 excerpt: "如题，顺便扯扯淡"
-modified: 2015/09/20 1:17:50 
+modified: 2015/09/20 1:17:50
 tags: [markdown,iframe]
 comments: true
 image:
@@ -10,6 +10,8 @@ image:
   credit: Pixabay
   creditlink: https://pixabay.com/zh/%E9%9F%B3%E4%B9%90%E4%BC%9A-%E4%BA%BA%E7%BE%A4-%E8%A7%82%E4%BC%97-%E4%BA%BA-%E9%9F%B3%E4%B9%90-%E5%A8%B1%E4%B9%90-%E8%8A%82%E6%97%A5-%E6%80%A7%E8%83%BD-%E4%B9%90%E8%B6%A3-%E4%B9%90%E9%98%9F-768722/
 ---
+
+> 在本博客全部使用https之后，外链播放器不能正常显示，是因为网易云音乐使用的源都是http的，在https页面中会显示`(blocked:mixed-content)`。所以以后外链也都将使用支持https协议的，例如soundcloud等。
 
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="http://music.163.com/outchain/player?type=2&id=29535531&auto=0&height=66"></iframe>
 
