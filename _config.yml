@@ -35,7 +35,7 @@ owner:
   twitter: #username
   facebook: #username
   google:
-    plus: 116052774697386661438
+    plus: #116052774697386661438
     analytics:
     verify:
     ad-client:
@@ -54,10 +54,10 @@ owner:
   dribbble: #username
   youtube: #username
   soundcloud: bl_indie
-  weibo: 2313701814
+  weibo: #2313701814
   flickr: #username
   codepen: #username
-  bilibili: 1321932
+  bilibili: #1321932
 
 include: [".htaccess"]
 exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules", "Gemfile", "Gemfile.lock", "LICENSE", "README.md"]
