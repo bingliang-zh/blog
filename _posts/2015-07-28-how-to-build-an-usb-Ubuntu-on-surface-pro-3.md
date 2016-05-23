@@ -108,9 +108,9 @@ USB设备，勾选**“启用USB控制器”**，点选**“USB 3.0 (xHCI)控制
 	<a href="{{ site.url }}/images/2015-07-28-how-to-build-an-usb-Ubuntu-on-surface-pro-3/2_partition.png"><img src="{{ site.url }}/images/2015-07-28-how-to-build-an-usb-Ubuntu-on-surface-pro-3/2_partition.png"></a>
 </figure>
 
-现在设备的最开始的地方建立一个32GB大小的fat32分区，然后挂载到/windows目录下。
+现在设备的最开始的地方建立一个32GB大小的fat32分区，然后挂载到/windows目录下。**此方法15.10无效，此后不再注明。如使用15.10及以后系统请直接使用所有磁盘空间，并把EFI设为第一个分区。**
 
-> 为什么要在设备的最开始的地方建立32G的fat32分区？**此方法15.10无效，此后不再注明。**
+> 为什么要在设备的最开始的地方建立32G的fat32分区？
 >
 > 因为windows系统识别U盘的时候只能识别第一个能识别的分区，如果把EFI启动分区作为第一个分区，那么windows就只能把第一个分区挂载到系统里，而我想要挂载32G的分区用来当U盘。虽然只能识别一个分区，不过这也有一个好处，在USB病毒泛滥的打印店等我们就不用担心病毒会对EFI启动分区做什么手脚了。
 
