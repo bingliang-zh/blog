@@ -246,7 +246,7 @@ Raspberry Pi在主路由上获取到的IP是192.168.1.4，现在可以在连到�
 
 但是不知为何Wifi信号是搜不到的，打开LuCI页面可以看到Wifi状态显示的是："Wireless is disabled or not associated"，在这里我折腾了很久，后来发现下一步可以修正它，让无线正常工作。
 
-## 增加加密模式的支持
+## 增加加密模式和对AP的支持
 
 参考：[Configure WiFi encryption [OpenWrt Wiki]](https://wiki.openwrt.org/doc/uci/wireless/encryption)
 
@@ -254,7 +254,9 @@ Raspberry Pi在主路由上获取到的IP是192.168.1.4，现在可以在连到�
 
     opkg update
 
-安装支持（官方建议安装wpad-mini），从支持情况来看，可能是默认的模式不支持AP，但是未作研究。
+安装支持（官方建议安装wpad-mini）。~~从支持情况来看，可能是默认的模式不支持AP，但是未作研究。~~
+
+安装了wpad-mini之后会增加对AP的支持，这样就可以使用网卡作为AP了。跟是否加密无关，但是还是建议使用时使用加密通讯。
 
     opkg install wpad-mini
 
@@ -362,3 +364,28 @@ Raspberry Pi使用opkg没法安装wget，所以这里还是使用scp来中转。
     sudo dd if=/dev/sdX of=/home/username/raspi_openwrt_shadowsocks_embed.img bs=1M count=76
 
 获得的映像为76MB，可以直接`gzip raspi_openwrt_shadowsocks_embed.img`压缩一下，压缩完只有8MB不到。顺手丢进Dropbox或者别的云存储可以保存。
+
+## 资料自取区
+
+### raspi_openwrt_shadowsocks_embed.img.gz
+
+[下载链接]({{ site.url }}/files/2016-05-28-make-raspberry-pi-a-fqrouter/raspi_openwrt_shadowsocks_embed.img.gz)
+
+- MD5: a6ad4acad7d87902bf6aa0b76d3f16f7
+- SHA-1: 52ff9c1c6e0877963ad65eb7ccc3ec107841afe8
+
+镜像中的用户密码：password
+
+### shadowsocks-libev-spec-polarssl_2.4.6-1_brcm2708.ipk
+
+[下载链接]({{ site.url }}/files/2016-05-28-make-raspberry-pi-a-fqrouter/shadowsocks-libev-spec-polarssl_2.4.6-1_brcm2708.ipk)
+
+- MD5: 9b2ee690197d8cb5f77235a7f8e113b2
+- SHA-1: 4d9c0da2a29c872a00313128d787c7abf88b7912
+
+### luci-app-shadowsocks-spec_1.4.0-1_all.ipk
+
+[下载链接]({{ site.url }}/files/2016-05-28-make-raspberry-pi-a-fqrouter/luci-app-shadowsocks-spec_1.4.0-1_all.ipk)
+
+- MD5: 8ad2f6be827f3cbf9dd62d2b9c936f93
+- SHA-1: a39a5dc33e7ce04e4adbb7c4a10d35b54103fbfc
