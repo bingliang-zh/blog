@@ -27,11 +27,11 @@ kramdown:
 
 # Site owner
 owner:
-  name: 秉亮(blStudio)
+  name: 秉亮(bingliang)
   avatar: bio-photo.jpg
-  bio: "杭州独立开发者\n(An indie developer in Hangzhou)"
+  bio: "gamer & coder"
   email: bl_indie@qq.com
-  disqus-shortname: thatblstudio
+  disqus-shortname: bingliang-zh
   twitter: #username
   facebook: #username
   google:
@@ -41,7 +41,7 @@ owner:
     ad-client:
     ad-slot:
   bing-verify:
-  github: thatblstudio
+  github: bingliang-zh
   stackoverflow: #123456/username   from a "http://stackoverflow.com/users/123456/username" link
   linkedin: #username
   xing: #username
