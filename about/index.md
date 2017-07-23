@@ -31,29 +31,3 @@ image:
 本科学的是数字媒体技术，所以并不是一个纯Geek，这个博客也不全是关于计算机技术。也因为专业关系而喜欢良好的设计，相信设计这个词本身的意义是给人自由而不是相反。
 
 走一步再走一步。但愿能让未来变得很好。
-
-## 一些推荐
-
-程序哲学：
-
-> [关于不要重复造轮子的二三事](http://avnpc.com/pages/howto-find-best-wheel-for-programming)
-> 
-> [如何成为一名黑客](http://translations.readthedocs.org/en/latest/hacker_howto.html)
-> 
-> [Splash Screens Are Evil, Don't Use Them!](http://cyrilmottier.com/2012/05/03/splash-screens-are-evil-dont-use-them/)
-
-巨巨的博客：
-
-> [云风的BLOG](http://blog.codingnow.com/)
-> 
-> [Keep on Fighting! - 谢益辉](http://yihui.name/cn/)
-> 
-> [阮一峰的网络日志](http://www.ruanyifeng.com/blog/)
-> 
-> [Cyril Mottier](http://cyrilmottier.com/)
-
-也可以看看：
-
-> [JUSTFONT BLOG](http://blog.justfont.com/)
-> 
-> [机核网 - GAMECORES](http://www.g-cores.com)
