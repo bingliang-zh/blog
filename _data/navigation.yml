@@ -1,16 +1,16 @@
 # Site navigation links
 
-- title: 关于
-  url: /about/
+# - title: 关于
+  # url: /about/
 
-- title: 全部博客
-  url: /posts/
+# - title: 全部博客
+  # url: /posts/
 
-- title: Profile
-  url: /profile/
+# - title: Profile
+  # url: /profile/
 
-- title: 毕业设计·友伴
-  url: https://github.com/thatblstudio/belong
+# - title: 毕业设计·友伴
+  # url: https://github.com/thatblstudio/belong
 
 # - title: Theme Setup
 #   url: /theme-setup/
